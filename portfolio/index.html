@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Wilson</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+</head>
+<body>
+    <div id="container">
+    <div id="top">
+        <div id="profile">
+            <div id="left">
+                <img src="profile.png" height="100px" style="margin-top:15px">
+            </div>
+            <div id="right" style="flex-shrink: 0">
+                <h1>Henry Wilson</h1>
+                <h2>I make <mark>movies</mark> and <mark>websites.</mark></h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="middle">
+        <div id="middle-left">
+
+            <menu id="nav" class="prevent-select">
+                <ul class="flex-menu">
+                    <li><a href="/#about">about</a></li>
+                    <li><a href="/#projects">projects</a></li>
+                    <li><a href="/#art">art</a></li>
+                    <details>
+                        <summary><li>contact</li></summary>
+                        <div id="contact-list">
+                            <li ><a href="https://www.linkedin.com/in/how40/">linkedin</a></li>
+                            <li ><a href="https://github.com/how40">github</a></li>
+                            <li ><a href="mailto:how40@pitt.edu">email</a></li>
+                        </div>
+                </details>
+                </ul>
+            </menu>
+    
+        </div>
+
+        <div id="middle-right">
+            <div class="section" id='about'>
+            <h3><mark>About</mark></h3>
+            <p>I am a student at the University of Pittsburgh studying Digital Narrative and Interactive Design, with minors in Computer Science and Film & Media Studies.</p>
+            <p>In my work, I like to explore the intersections of analog and digital media.</p>
+            <h4>tech i know:</h4>
+            <ul id="tech">
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Adobe Creative Suite (Photoshop, Premiere, Audition, Illustrator)</li>
+            </ul>
+            </div>
+            <div class="section" id='projects'>
+                <h3><mark>Projects</mark></h3>
+                <div id="project-list">
+                    <h4>dimwit</h4>
+                        <p>my passion project, an ode to doing what you love without fear of self-judgement.</p>
+                    <h4>big trouble at the daily double</h4>
+                        <p>visualization of <em>Jeopardy!</em> dataset</p>
+                    <h4>in a dark, dark room</h4>
+                        <p>handmade diorama with integrated arduino</p>
+                    <h4>flygame</h4>
+                        <p>simple game demo made in unity 2d</p>
+                </div>
+
+            </div>
+            <div class="section" id='art' style="max-width:400px;">
+                <h3 style="margin-bottom: 20px;"><mark>Art</mark></h3>
+                <div id="art-wall">
+                    <div id="art-left">
+                        <!-- <img src="art/temp-ss.gif"> -->
+                        <img src="art/somedays.PNG" style="width:400px">
+
+                        <img src="art/flh3.png" style="width:300px">
+                        <!-- <img src="art/fmd-ad.gif"style="width:300px"> -->
+                    </div>
+                    <div id="art-left">
+                        <img src="art/globe-ad.gif">
+                        <img src="art/dim2k.png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- <div id="footer">
+        copyright 2024
+    </div> -->
+    </div>
+
+
+</body>
+</html>

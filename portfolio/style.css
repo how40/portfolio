@@ -1,0 +1,144 @@
+body {
+    background-color: #222A68;
+    color: #F0F0F4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+menu li:hover, a:hover {
+    background-color: #F0F0F4;
+    color:#222A68;
+}
+
+a {
+    color:#F0F0F4;
+    text-decoration: none;
+}
+
+mark {
+    background-color: #F0F0F4;
+    color:#222A68;
+    padding: 5px;
+}
+
+ul, li {
+    list-style-type: none;
+    padding:0px;
+}
+
+h1, h2 {
+    padding-left: 10px;
+}
+
+h1 {
+    margin: 8px;
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 8px;
+    font-weight: lighter;
+    color: #D3D3DE;
+}
+
+#nav {
+    padding: 20px;
+    top: 0;
+    position: sticky;
+}
+
+details > summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#profile {
+    display:flex;
+    justify-content: space-between;
+    margin-left: 2em;
+}
+
+#top, #middle, #footer {
+    display:flex;
+    max-width:400px;
+    gap: 3em;
+    justify-content: space-between;
+}
+
+#footer{ 
+    background-color: #F0F0F4;
+    color:#222A68;
+    justify-self: flex-end;
+    width:100%;
+    padding:5px;
+}
+
+#art-wall {
+    display:flex;
+    flex-direction: column;
+    gap:2em;
+    size:70%;
+}
+
+#art-left, #art-right {
+    display:flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+
+
+#flex-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+
+#tech li {
+    list-style-type: '> ';
+}
+#tech, #project-list p {
+    padding-left: 50px;
+}
+
+#contact-list {
+    padding-left: 10px;
+}
+
+@media (max-width: 420px) { /* Mobile layout */
+    #middle {
+    flex-direction: column;
+    }
+    #middle-left {
+        flex-direction: row;
+        gap: 1em;
+        position: sticky;
+        top: 0;
+    }
+    menu {
+        height:40px;
+
+    }
+    #middle-right {
+        margin-top: -100px;
+    }
+    #art-left, #art-right {
+        flex-direction: column;
+    }
+}
