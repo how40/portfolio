@@ -30,17 +30,18 @@
         <div id="buttons">
             <!--<button class='box' onclick="randomBackground()">change background</button>-->
             <button class='box' onclick="randomColor()">mix it up!</button>
+            <button class='box' onclick="">my art and photography portfolio</button>
         </div>
 
     </header>
 
     <main id="middle">
 
-        <div id="left">
+        <div id="middle-left">
 
             <nav id="menu" class="box">
                 <ul>
-                    <li><a href="/#about">about</a></li>
+                    <li><a href="/#about">about&nbsp;&nbsp;</a></li>
                     <li><a href="/#projects">projects</a></li>
                     <!-- <li><a href="/#art">art</a></li> -->
                     <li><a href="/#contact">contact</a></li>
@@ -49,12 +50,11 @@
         </div>
 
         <div id="middle-right">
-            <div id="column">
-
-                <div class="box" id="about">
+                <div id="about-wrapper">
+                    <div class="box" id="about">
 
                     <h3><mark>About</mark></h3>
-                    <p>I am a student at the University of Pittsburgh studying <strong>Digital Narrative and Interactive Design</strong>, with minors in <strong>Computer Science</strong> and <strong>Film & Media Studies.</strong></p>
+                    <p>I am a student at the University of Pittsburgh studying <strong><a href="https://www.sci.pitt.edu/academics/undergraduate-majors/digital-narrative-and-interactive-design">Digital Narrative and Interactive Design</a></strong>, with minors in <strong>Computer Science</strong> and <strong>Film & Media Studies.</strong></p>
                     <p>In my work, I like to explore the intersections of analog and digital media.</p>
                     <mark><a href="/Henry Wilson Resume.pdf"id="resume" style="color:var(--light-color)">read my resume here</a></mark>
                     
@@ -83,91 +83,84 @@
                     
                     </div>
                     
-                </div>
-                <div class="box" id='projects'>
-
-                    <h3><mark>Projects</mark></h3>
-                    <span>click each project to expand</span>
-                    <div id="project-list">
-                        
-                        <details>
-                            <summary><h4>dimwit</h4></summary>
-                            <p>my passion project, an ode to doing what you love without fear of self-judgement.</p>
-                        </details>
-                            <ul>
-                                <li><mark>Adobe Creative Suite</mark></li>
-                                <li><mark>HTML/CSS</mark></li>
-                            </ul>
-                        
-                        <details>
-                            <summary><h4>big trouble at the daily double</h4></summary>
-                            <p>visualization of <em>Jeopardy!</em> dataset</p>
-                        </details>
-                            <ul>
-                                <li><mark>Python</mark></li>
-                                <li><mark>Pandas</mark></li>
-                                <li><mark>NumPy</mark></li>
-                            </ul>
-                        
-                        <details>
-                            <summary><h4>in a dark, dark room</h4></summary>
-                            <p>handmade diorama with integrated arduino</p>
-                        </details>
-                            <ul>
-                                <li><mark>Arduino</mark></li>
-                                <li><mark>C#</mark></li>
-                            </ul>
-                        
-                        <details>
-                            <summary><h4>flygame</h4></summary>
-                            <p>simple game demo made in unity 2d</p>
-                        </details>
-                
                     </div>
-                
                 </div>
-                
-            </div>
 
-            <div id="column">
-<!--                 <div class="box" id='art'>
+                <div id="projects-wrapper">
+                    <div class="box" id='projects'>
 
-                    <h3><mark>Art</mark></h3>
-                    <div id="slideshow">
-                        <div id="slide-track">
-                            <img src="/art/dim2k.png" alt="dim2k">
-                            <img src="/art/flyer.png" alt="flyer">
-                            <img src="/art/flh3.png" alt="flh3">
-                            <img src="/art/fmd-ad.gif" alt="fmd-ad">
-                            <img src="/art/somedays.PNG" alt="somedays">
-                            <img src="/art/flyer-2-site.png" alt="flyer-2-site">
-                            <img src="/art/globe-ad.gif" alt="globe-ad">
-                        </div>
-                    </div>
+                        <h3><mark>Projects</mark></h3>
+                        </br><span>click each project to expand</span>
+                        <div id="project-list">
+                            
+                            <details>
+                                <summary><h4>dimwit</h4></summary>
+                                <p>My passion project, an ode to doing what you love without fear of self-judgement. A hybrid of '90s skate tapes, early '00s YouTube, and a 2020's sense of online storytelling. </br></br><mark><a style="color:var(--light-color)" href="https://dimwit.neocities.org/">dimwit.neocities.org</a></mark>
+                                </br></br>
+                                <iframe width="fit-content" height="fit-content" src="https://www.youtube.com/embed/u4NyB2hfqHU?si=cCk0c1RcuP5U5w3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </p>
+                                
+                            </details>
+                                <ul>
+                                    <li><mark>Adobe Creative Suite</mark></li>
+                                    <li><mark>HTML/CSS</mark></li>
+                                </ul>
+                            
+                            <details>
+                                <summary><h4>big trouble at the daily double</h4></summary>
+                                <p>Visualization of <em>Jeopardy!</em> dataset -- how have contestant betting patterns evolved throughout the shows run? Where is one most likely to find a Daily Double on the gameboard?  </br></br><mark><a style="color:var(--light-color)" href="https://github.com/how40/Unit1-Data-Storytelling/tree/main">Big Trouble at the Daily Double! (github) </a></mark></br></br></p>
+                            </details>
+                                <ul>
+                                    <li><mark>Python</mark></li>
+                                    <li><mark>Pandas</mark></li>
+                                    <li><mark>NumPy</mark></li>
+                                </ul>
+                            
+                            <details>
+                                <summary><h4>in a dark, dark room</h4></summary>
+                                <p>Handmade diorama retelling the classic children's short story <em>In a Dark, Dark Room</em>, with integrated arduino lights and motion.</br></br>
+                                    <iframe width="fit-content" height="fit-content" src="https://www.youtube.com/embed/rbidAQgKsZo" title="In a Dark, Dark Room - arduino project DNID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+                            
+                            </details>
+                                <ul>
+                                    <li><mark>Arduino</mark></li>
+                                    <li><mark>C#</mark></li>
+                                </ul>
+                            
+                            <details>
+                                <summary><h4>flygame</h4></summary>
+                                <p>simple game demo made in unity 2d</p>
+                            </details>
+                            <ul>
+                                <li><mark>Unity 2D</mark></li>
+                            </ul>
                     
-                </div> -->
-
-                <div class="box" id='contact'>
-
-                    <h3><mark>Contact</mark></h3>
-
-                    <div id="contact-container" style="display:flex">
-                        <ul>
-                            <li ><a href="https://www.linkedin.com/in/how40/">linkedin</a></li>
-                            <li ><a href="https://github.com/how40">github</a></li>
-                            <li ><a href="mailto:how40@pitt.edu">email</a></li>
-                        </ul>
-                        <img src="/dancer.gif">
+                        </div>
+                    
                     </div>
-
                 </div>
-            </div>
+
+                <div id="contact-wrapper">
+                    <div class="box" id='contact'>
+
+                        <h3><mark>Contact</mark></h3>
+                        </br><span>you can find me here:</span>
+                        <div id="contact-container" style="display:flex">
+                            <ul>
+                                <li ><a href="https://www.linkedin.com/in/how40/">linkedin</a></li>
+                                <li ><a href="https://github.com/how40">github</a></li>
+                                <li ><a href="mailto:how40@pitt.edu">email</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
 
         </div>
 
     </main>
 
-    <footer>hand-coded with love 2024 Henry Wilson</footer>
+    <footer>hand-coded* with love 2024 Henry Wilson</footer>
 
     </div>
 
