@@ -10,6 +10,7 @@ html, body {
     padding: 0;
     height: 100%;
     overflow: hidden;
+    position:fixed;
 }
 
 body {
@@ -39,7 +40,7 @@ button {
     font-weight: bold;
     border: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    opacity: .8;
+    Xopacity: .8;
     transition: .5s;
 }
 
@@ -78,14 +79,9 @@ h3 {
 }
 
 footer {
-    width: fit-content;
-    color: var(--dark-color);
-    background-color: var(--light-color);
-    padding: 5px;
-    height: 20px;
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
+    background-color: var(--dark-color);
+    width: 100vw;
+    height: fit-content;
 }
 
 form {
@@ -93,6 +89,12 @@ form {
 }
 nav {
     z-index: 10;
+}
+
+nav a.active {
+    background-color: var(--light-color); /* Adjust as needed */
+    color: var(--dark-color); /* Adjust as needed */
+    font-weight: bold;
 }
 
 details summary {
@@ -114,6 +116,16 @@ details p {
 #container {
     display: flex;
     flex-direction: column;
+}
+#footer-wrapper {
+    width: fit-content;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    padding: 5px;
+    height: 20px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
 }
 
 #top, #middle {
@@ -176,8 +188,13 @@ main button:hover {
 #middle-left {
     position: sticky;
     top: 0;
+    display: flex;
+    flex-direction: column;
 }
-
+#middle-left > .box {
+    margin: 1em;
+    flex-shrink: 0;
+}
 #middle-right {
     height: 100vh;
     overflow-y:auto;
@@ -220,21 +237,6 @@ main button:hover {
     gap: 1em;
 }
 
-#slideshow {
-    width:100%;
-    overflow:hidden;
-    position:relative;
-}
-
-#slide-track {
-    display:flex;
-    width: calc(100% * 7);
-}
-
-#slide-track img {
-    height: 100%;
-    display: flex;
-}
 
 #skills-left li:hover, #skills-right li:hover {
     background-color: var(--dark-color);
@@ -242,19 +244,21 @@ main button:hover {
     cursor:pointer;
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+#color {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size:medium;
 }
 
-#slideshow:hover .slide-track {
-    animation-play-state: paused;
+#contact img {
+    width:30px;
+    fill: var(--dark-color);
 }
 
+svg {
+    color: var(--dark-color);
+}
 
 /* Media Queries */
 @media only screen and (max-width: 600px) {
@@ -262,13 +266,21 @@ main button:hover {
         flex-direction: column;
     }
 
+
+    #middle-left {
+        flex-direction: row;
+    }
+
     #profile {
         flex-shrink: 0;
         flex-direction: column;
+        width: 88vw;
     }
 
-    #profile img {
-        display: none;
+
+
+    #buttons {
+        width: fit-content;
     }
 
     #top {

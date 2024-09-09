@@ -10,15 +10,12 @@
 </head>
 
 <body>
+
     <div id="container">
 
     <header id="top">
 
         <div id="profile" class="box">
-
-<!--             <div id="left">
-                <img src="profile.png" alt="Profile Picture" height="100px">
-            </div> -->
 
             <div id="right">
                 <h1>Henry Wilson</h1>
@@ -27,26 +24,29 @@
 
         </div>
 
-        <div id="buttons">
-            <!--<button class='box' onclick="randomBackground()">change background</button>-->
-            <button class='box' onclick="randomColor()">mix it up!</button>
-            <button class='box' onclick="">my art and photography portfolio</button>
-        </div>
-
     </header>
 
     <main id="middle">
 
         <div id="middle-left">
 
+            <div id="buttons" class="box">
+                <button id="color" onclick="randomColor()">color me</button>
+            </div>
+
             <nav id="menu" class="box">
                 <ul>
                     <li><a href="/#about">about&nbsp;&nbsp;</a></li>
                     <li><a href="/#projects">projects</a></li>
-                    <!-- <li><a href="/#art">art</a></li> -->
                     <li><a href="/#contact">contact</a></li>
                 </ul>
             </nav>
+
+            <div id="buttons" class="box">
+                <button id="color"><a href='/art.html'>my art</a></button>
+            </div>
+
+
         </div>
 
         <div id="middle-right">
@@ -145,7 +145,7 @@
 
                         <h3><mark>Contact</mark></h3>
                         </br><span>you can find me here:</span>
-                        <div id="contact-container" style="display:flex">
+                        <div id="contact-container">
                             <ul>
                                 <li ><a href="https://www.linkedin.com/in/how40/">linkedin</a></li>
                                 <li ><a href="https://github.com/how40">github</a></li>
@@ -160,7 +160,11 @@
 
     </main>
 
-    <footer>hand-coded* with love 2024 Henry Wilson</footer>
+    <footer>
+        <div id="footer-wrapper">
+            hand-coded* with love 2024 Henry Wilson
+        </div>
+    </footer>
 
     </div>
 
