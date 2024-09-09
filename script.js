@@ -67,28 +67,3 @@ const newB = Math.min(255, avg + 100);
 return `rgb(${newR},${newG},${newB})`;
 }
 
-
-//smooth scrolling nav
-document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('nav a');
-    const middleRight = document.getElementById('middle-right');
-
-    links.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start', // Adjust this to 'center' or 'end' if needed
-                });
-            }
-        });
-    });
-});
-
-
-
-window.onload = randomColor;
