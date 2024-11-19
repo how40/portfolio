@@ -1,51 +1,11 @@
-
-//Random background image
-const images = [
-    'url("/bg/IMG_0367.JPG")',
-    'url("/bg/IMG_0385.JPG")',
-    'url("/bg/IMG_0404.JPG")',
-    'url("/bg/IMG_0480.JPG")',
-    'url("/bg/IMG_0542.JPG")',
-    'url("/bg/IMG_0548.JPG")',
-    'url("/bg/IMG_0616.JPG")',
-    'url("/bg/IMG_5125.JPG")',
-    'url("/bg/IMG_5507.JPG")',
-    'url("/bg/IMG_5534.JPG")',
-    'url("/bg/IMG_5636.JPG")',
-    'url("/bg/IMG_5711.JPG")',
-    'url("/bg/IMG_5781.JPG")',
-    'url("/bg/IMG_5914.JPG")',
-    'url("/bg/IMG_6083.JPG")',
-    'url("/bg/IMG_6173.JPG")',
-    'url("/bg/IMG_6188.JPG")',
-    'url("/bg/IMG_6267.JPG")',
-    'url("/bg/IMG_6291.JPG")',
-    'url("/bg/IMG_6385.JPG")',
-    'url("/bg/IMG_6382.JPG")',
-    'url("/bg/IMG_6443.JPG")',
-    'url("/bg/IMG_6445.JPG")',
-    'url("/bg/IMG_6456.JPG")',
-    'url("/bg/IMG_0750.JPG")',
-    'url("/bg/IMG_6495.JPG")',
-    'url("/bg/IMG_0219.JPG")',
-    'url("/bg/IMG_0234.JPG")',
-    'url("/bg/IMG_0299.JPG")',
-    'url("/bg/IMG_0322.JPG")'
-];
-
-randomBackground = () => {
-    const randomIndex = Math.floor(Math.random() * images.length);
-    const bg = document.querySelector('body');
-    bg.setAttribute("style","background-repeat:repeat;background-size:400px")
-    bg.style.backgroundImage = images[randomIndex];
-}
+//Colors
 
 let randomColor = () => {
 
     const r = Math.floor(Math.random() * 255);
     const g = Math.floor(Math.random() * 255);
     const b = Math.floor(Math.random() * 255);
-    const rgb = `rgb(${r},${g},${b})`;
+    const rgb = `rgb(${r},${g},${b})`; //random color
 
     const bg = document.querySelector('body');
     bg.setAttribute("style","background-color:black;")
@@ -67,3 +27,53 @@ const newB = Math.min(255, avg + 100);
 return `rgb(${newR},${newG},${newB})`;
 }
 
+
+//scroll-based sidebar
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all sections and nav links
+    const sections = document.querySelectorAll("#middle-right .section");
+    const navLinks = document.querySelectorAll("#menu .nav-link");
+
+    const firstHeading = sections[0];
+    const firstSectionId = firstHeading.closest(".section").getAttribute("id");
+    const firstNavLink = document.querySelector(`.nav-link[href="#${firstSectionId}"]`);
+  
+    if (firstNavLink) {
+      // Remove active class from all links, just in case
+      navLinks.forEach((link) => link.classList.remove("active"));
+  
+      // Add active class to the first section's link
+      firstNavLink.classList.add("active");
+    }
+  
+    // Create an IntersectionObserver tied to the #middle-right container
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let mostRecentHeading = null;
+        entries.forEach((entry) => {  
+          if (entry.isIntersecting) {
+            mostRecentHeading = entry.target;
+          }
+        });
+
+        if (mostRecentHeading) {
+
+            const id = mostRecentHeading.closest(".section").getAttribute("id");
+            const navLink = document.querySelector(`.nav-link[href="#${id}"]`);
+
+            if (navLink) {
+                navLinks.forEach((link) => link.classList.remove("active"));
+                navLink.classList.add("active");
+            }
+          }
+      },
+      {
+        root: document.querySelector("#middle-right"),
+        threshold: 0.5, 
+      }
+    );
+  
+    // Observe all sections
+    sections.forEach((section) => observer.observe(section));
+  });
+  

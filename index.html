@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <base href="https://how40.github.io/portfolio/">
 </head>
 
 <body>
@@ -16,12 +17,10 @@
     <header id="top">
 
         <div id="profile" class="box">
-
             <div id="right">
-                <h1>Henry Wilson</h1>
-                <h2>I make <mark>movies</mark> and <mark>websites.</mark></h2>
+                <h1><a href="">Henry Wilson</a></h1>
+                <h2 id="tagline">I make <mark>movies</mark> and <mark>websites.</mark></h2>
             </div>
-
         </div>
 
     </header>
@@ -30,38 +29,38 @@
 
         <div id="middle-left">
 
-            <div id="buttons" class="box">
-                <button id="color" onclick="randomColor()">color me</button>
-            </div>
-
             <nav id="menu" class="box">
                 <ul>
-                    <li><a>about&nbsp;&nbsp;</a></li>
-                    <li><a>projects</a></li>
-                    <li><a>contact</a></li>
+                    <li><a class="nav-link" href="#about-wrapper">about</a></li>
+                    <li><a class="nav-link" href="#projects-wrapper">projects</a></li>
+                    <li><a class="nav-link" href='#art-wrapper' >art</a></li>
+                    <li><a class="nav-link" href="#contact-wrapper">contact</a></li>
+                    <li><a class="nav-link" onclick="randomColor()">colors</a></li>
                 </ul>
             </nav>
             
-            <div id="buttons" class="box">
-                <button id="color"><a href='/portfolio/art.html'>my art</a></button>
-            </div>
-            
-
         </div>
 
         <div id="middle-right">
-                <div id="about-wrapper">
+
+                <div class = "section" id="tagline-wrapper">
+                    <div class="box" id="tagline-box">
+                            <h2 id='tagline'>I make <mark>movies</mark> and <mark>websites.</mark></h2>
+                    </div>
+                </div>
+
+                <div class = "section" id="about-wrapper">
                     <div class="box" id="about">
 
                     <h3><mark>About</mark></h3>
                     <p>I am a student at the University of Pittsburgh studying <strong><a href="https://www.sci.pitt.edu/academics/undergraduate-majors/digital-narrative-and-interactive-design">Digital Narrative and Interactive Design</a></strong>, with minors in <strong>Computer Science</strong> and <strong>Film & Media Studies.</strong></p>
                     <p>In my work, I like to explore the intersections of analog and digital media.</p>
-                    <mark><a href="https://how40.github.io/portfolio/hw-resume.pdf" id="resume" style="color:var(--light-color)">read my resume here</a></mark>
+                    <mark><a href="/resume.pdf" id="resume" style="color:var(--light-color)">read my resume here</a></mark>
                     
                     <div id="skills" style="display:flex; justify-content: space-evenly;">
 
                         <div id="skills-left">
-                            <h4>skills i know</h4>
+                            <h4>Skills I know:</h4>
                             <ul id="tech">
                                 <li>HTML/CSS</li>
                                 <li>JavaScript</li>
@@ -71,7 +70,7 @@
                         </div>
 
                         <div id="skills-right">
-                            <h4>programs i know</h4>
+                            <h4>Programs I know:</h4>
                             <ul id="tech">
                                 <li>Adobe PhotoShop</li>
                                 <li>Adobe Premiere Pro</li>
@@ -86,14 +85,14 @@
                     </div>
                 </div>
 
-                <div id="projects-wrapper">
+                <div class = "section" id="projects-wrapper">
                     <div class="box" id='projects'>
 
                         <h3><mark>Projects</mark></h3>
-                        </br><span>click each project to expand</span>
+
                         <div id="project-list">
                             
-                            <details>
+                            <details open>
                                 <summary><h4>dimwit</h4></summary>
                                 <p>My passion project, an ode to doing what you love without fear of self-judgement. A hybrid of '90s skate tapes, early '00s YouTube, and a 2020's sense of online storytelling. </br></br><mark><a style="color:var(--light-color)" href="https://dimwit.neocities.org/">dimwit.neocities.org</a></mark>
                                 </br></br>
@@ -106,7 +105,7 @@
                                     <li><mark>HTML/CSS</mark></li>
                                 </ul>
                             
-                            <details>
+                            <details open>
                                 <summary><h4>big trouble at the daily double</h4></summary>
                                 <p>Visualization of <em>Jeopardy!</em> dataset -- how have contestant betting patterns evolved throughout the shows run? Where is one most likely to find a Daily Double on the gameboard?  </br></br><mark><a style="color:var(--light-color)" href="https://github.com/how40/Unit1-Data-Storytelling/tree/main">Big Trouble at the Daily Double! (github) </a></mark></br></br></p>
                             </details>
@@ -116,7 +115,7 @@
                                     <li><mark>NumPy</mark></li>
                                 </ul>
                             
-                            <details>
+                            <details open>
                                 <summary><h4>in a dark, dark room</h4></summary>
                                 <p>Handmade diorama retelling the classic children's short story <em>In a Dark, Dark Room</em>, with integrated arduino lights and motion.</br></br>
                                     <iframe width="fit-content" height="fit-content" src="https://www.youtube.com/embed/rbidAQgKsZo" title="In a Dark, Dark Room - arduino project DNID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
@@ -127,7 +126,7 @@
                                     <li><mark>C#</mark></li>
                                 </ul>
                             
-                            <details>
+                            <details open>
                                 <summary><h4>flygame</h4></summary>
                                 <p>simple game demo made in unity 2d</p>
                             </details>
@@ -140,7 +139,14 @@
                     </div>
                 </div>
 
-                <div id="contact-wrapper">
+                <div class = "section" id="art-wrapper">
+                    <div class="box" id="art">
+                        <h3><mark>Art</mark></h3>
+                        </br><span>See my art and photography <button>here</button></span>
+                    </div>
+                </div>
+
+                <div class = "section" id="contact-wrapper">
                     <div class="box" id='contact'>
 
                         <h3><mark>Contact</mark></h3>
@@ -155,6 +161,8 @@
 
                     </div>
                 </div>
+
+                <div id='blank' style="height:55vh"></div>
 
         </div>
 
