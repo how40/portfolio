@@ -12,6 +12,7 @@ html, body {
     height: 100%;
     overflow:hidden;
     position:fixed;
+    caret-color: var(--light-color);
 }
 
 body {
@@ -26,7 +27,7 @@ header, main {
 
 header {
     flex-direction: row;
-    padding-bottom: 1em;
+    padding-bottom: 20px;
     background-color: var(--dark-color);
     height: calc(15vh);
 }
@@ -274,6 +275,12 @@ svg {
 
 #tagline-wrapper {
     display:none;
+}
+
+#project-list li mark {
+    background-color: var(--light-color);
+    border: 2px solid var(--dark-color);
+    color: var(--dark-color);
 }
 
 /* media queries */
