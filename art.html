@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <base href="https://how40.github.io/portfolio/">
     <style>
         :root {
             --light-color: #F0F0F4;
@@ -30,9 +31,12 @@
         img {
             width: 100%
         }
-        img:hover {
-            
+
+        #middle-right h2 {
+            font-weight: bold;
+            font-size: 36px;
         }
+
         @media only screen and (max-width: 600px) {
             #middle-right {
                 flex-direction: column;
@@ -54,18 +58,21 @@
     
         <main id="middle">
             <div id="middle-left">
-                <div id="buttons" class="box">
-                    <button id="color" onclick="randomColor()">color me</button>
-                </div>
+                
+
                 <nav id="menu" class="box">
                     <ul>
-                        <li><a href="https://how40.github.io/portfolio/">back</a></li>
+                        <li><a class="nav-link" href="">back</a></li>
+                        <li><a class="nav-link" onclick="randomColor()">colors</a></li>
                     </ul>
                 </nav>
+
+
             </div>
         
             <div id="middle-right">
                 <div id="flex-column">
+                    <div class="box"><h2>graphic design</h2></div>
                     <img src="art/flyer-2-site.png">
                     <img src="art/flyer.png">
                 </div>
@@ -74,10 +81,11 @@
                     <img src="art/dim2k.png">
                     <img src="art/fmd-ad.gif">
                     <img src="art/globe-ad.gif">
-                    <img src="/art/flh3.png">
                 </div> 
                 <div id="flex-column">
-                    <span style="height:800px"> </span>
+                    <img src="art/flh3.png">
+                    <img src="art/neocities-paper.png">
+                    <img src="art/NLRA.png">
                 </div>
 
             </div>
