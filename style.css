@@ -18,6 +18,7 @@ html, body {
 body {
     background-color: var(--dark-color);
     color: var(--light-color);
+    transition: color 0.3s ease, background-color 0.3s ease;
     font-family: Arial, Helvetica, sans-serif;
 }
 
